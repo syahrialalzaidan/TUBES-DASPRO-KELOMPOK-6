@@ -46,3 +46,14 @@ def split(a):   # Note kalau misalnya nginput datanya pake fungsi input data si 
             teks += j
     hasil[k] = teks
     return hasil
+
+# Kalo ga salah, length gitu gabisa jd make ini aja
+def length(array):
+   ## initializing the count to 0
+   sum = 0
+   for char in array:
+      sum += 1
+   return sum
+
+# Baru kalo mau make tambahan buat append make + aja
+# semisalnya A = [1,2,3,4], B = [5] langsung A + B
