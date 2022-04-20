@@ -36,7 +36,7 @@ while login == False:
 
 # Isi datauser -> [[True], [id, username, nama, password, role, saldo]]
 # Role usernya
-role = fungsi.cekRole(datauser[1][1], user)
+role = datauser[1][4]
 
 
 # Program Utamanya
