@@ -72,3 +72,29 @@ def count_csv_column(file) :
     for x in b:
         column += 1
     return column
+
+def caridatalist(data,urutan,cek):
+# Kaya fungsi caridata tapi buat di matiksnya
+    for i in data:
+        if data[i][urutan] == cek:
+            return data[i]
+        else:
+            continue
+    return []
+
+
+def indeksdata(data, urutan, cek):
+# Nyari indeksnya
+    indeks = 0
+    for i in data:
+        if data[i][urutan] == cek:
+            return indeks
+        else:
+            indeks += 1
+    return (-1)
+
+
+def cekRole(username, data):
+# Role usernamenya
+    role = caridatalist(data, 1, username)[1]
+    return role
