@@ -92,9 +92,3 @@ def indeksdata(data, urutan, cek):
         else:
             indeks += 1
     return (-1)
-
-
-def cekRole(username, data):
-# Role usernamenya
-    role = caridatalist(data, 1, username)[1]
-    return role
