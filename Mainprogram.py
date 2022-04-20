@@ -34,7 +34,7 @@ while login == False:
     else:
         print("Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain “login”")
 
-
+# Isi datauser -> [[True], [id, username, nama, password, role, saldo]]
 # Role usernya
 role = fungsi.cekRole(datauser[1][1], user)
 
