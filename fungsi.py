@@ -57,3 +57,18 @@ def length(array):
 
 # Baru kalo mau make tambahan buat append make + aja
 # semisalnya A = [1,2,3,4], B = [5] langsung A + B
+
+def count_csv_row(file) : 
+    data = open(file, 'r')
+    row = 0 
+    for a in data.readlines():
+        row += 1
+    return row   #ini include header
+
+def count_csv_column(file) :
+    data = open(file, 'r')
+    column = 0 
+    b = split(data.readlines()[0])
+    for x in b:
+        column += 1
+    return column
