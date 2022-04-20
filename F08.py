@@ -1,5 +1,7 @@
 from HelperFunction import data_user,length, datagame,isUser,data_kepemilikan
+from fungsi import count_csv_row
 
+history = ['' for x in range(count_csv_row('game.csv'))]
 username_terbaru = input()
 def idUser (username):
   for i in range(length(data_user)):
@@ -48,6 +50,15 @@ def buy_game():
         # Mencari semua kemungkinan
         if valid == True and game_own == False and saldoUser>hargaGame and stock > 0:
           print(f"Game {nama} berhasil dibeli")
+          #masukin ke list history
+          i = 0 
+          while True :
+            if history[i] == '' :
+              history[i] = IDgame
+              break
+            else :
+              i += 1
+          
         elif game_own == True:
           print("Anda sudah memiliki Game tersebut")
         elif saldoUser - hargaGame < 0 :
