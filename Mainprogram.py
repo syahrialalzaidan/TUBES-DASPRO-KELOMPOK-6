@@ -116,7 +116,7 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     # F10 - search_my_game
     elif perintah == "search_my_game":
         if role == "user":
-            F10.search_my_game()
+            F10.search_my_game(username)
         else:
             print("Maaf, hanya user yang dapat menjalankan program ini!")
     
