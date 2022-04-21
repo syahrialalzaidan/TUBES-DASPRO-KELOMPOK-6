@@ -96,7 +96,7 @@ def indeksdata(data, urutan, cek):
 def csv_to_array(x) :
     #bikin array dari  user.csv
     file = open(x, 'r')
-    array_user = [['' for x in range(count_csv_column(x)] for i in range(count_csv_row(x))]
+    array_user = [['' for x in range(count_csv_column(x))] for i in range(count_csv_row(x))]
     i = 0 
     kolom = count_csv_column(x)
 
