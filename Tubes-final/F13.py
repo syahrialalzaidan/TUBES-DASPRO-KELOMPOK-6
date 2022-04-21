@@ -20,6 +20,7 @@ def riwayat(username) :
     #ngefilter history berdasarkan user_id
     for i in history :
         if i[3] == user_id :
+            found = True
             print(f'{nomor}. {(i[0])}  | {(i[1])} | {(i[2])} | {(i[4])} | ')
             nomor += 1
         else :
