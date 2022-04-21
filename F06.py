@@ -1,4 +1,4 @@
-from HelperFunction import length
+from fungsi import length
 
 
 def ubah_stock(datagame):
