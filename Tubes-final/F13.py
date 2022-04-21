@@ -2,13 +2,8 @@ from fungsi import csv_to_array,split, samecount
 
 user = csv_to_array("user.csv")
 # Isi array game -> [[id, nama, katergori, tahun rilis, harga, stok], [id, nama, katergori, tahun rilis, harga, stok]]
-game = csv_to_array("game.csv")
-# Isi array riwayat -> [[game id, nama, harga, user id, tahun beli], [game id, nama, harga, user id, tahun beli]]
 history = csv_to_array("riwayat.csv")
 #variabelnya gak bisa dinamain "riwayat" karena bakal rancu sama nama fungsinya
-
-# Isi array kepemilikan -> [[game id, user id], [game id, user id]]
-kepemilikan = csv_to_array("kepemilikan.csv")
 
 def riwayat(username) :
     user_id = ''
@@ -29,4 +24,3 @@ def riwayat(username) :
             nomor += 1
         else :
             pass    
-riwayat()
