@@ -28,7 +28,7 @@ def register(data):
     data = data + userbaru
 
     # Mencek apakah usernamenya sudah ada atau tidak
-    if fungsi.caridatalist(data, 1, username) == 0:
+    if fungsi.caridatalist(data, 1, username) == []:
         return data
     else:
         print("Username " + username + " sudah ada. Silahkan gunakan username lain!")
