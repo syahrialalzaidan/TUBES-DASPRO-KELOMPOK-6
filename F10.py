@@ -55,4 +55,4 @@ def search_my_game() :
                     nomor += 1
         else :
             pass
-search_my_game()
+# search_my_game()
