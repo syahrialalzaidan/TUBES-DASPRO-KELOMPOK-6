@@ -16,7 +16,7 @@ def tambahGame(data):
         tahunrilis = input("Masukan tahun rilis: ")
         harga = input("Masukan harga: ")
         stok = input("Masukan stok awal: ")
-        if cekkosong(nama) or cekkosong(kategori) or cekkosong(tahunrilis) or cekkosong(harga) or cekkosong(stok):
+        if not(cekkosong(nama) or cekkosong(kategori) or cekkosong(tahunrilis) or cekkosong(harga) or cekkosong(stok)):
             break
         else:
             print("Mohon masukan semua informasi mengenai game agar dapat disimpan di BNMO")
@@ -28,8 +28,16 @@ def tambahGame(data):
     for i in range(4, 7):
         angka += id[i]
     idAngka = int(angka) + 1
-    id = "GAME" + str(idAngka)
+    
+    # Menambah digit awal
+    if idAngka < 10:
+        id = "00" + str(idAngka)
+    elif idAngka < 100:
+        id = "0" + str(idAngka)
+    else:
+        id = str(idAngka)
+    id = "GAME" + id
 
     # Menambahkan game ke list game
-    data = data + [id, nama, kategori, tahunrilis, harga, stok]
+    data = data + [[id, nama, kategori, tahunrilis, harga, stok]]
     return data
