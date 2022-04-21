@@ -1,5 +1,5 @@
 import fungsi
-
+import B01
 
 def login(data):
     # Input usename, password, serta data usernamnya
@@ -14,9 +14,9 @@ def login(data):
 
     # Mencek password
     else:
-        if datauser[3] == password:
+        if B01.CaesarChiper("something", 7, datauser[3], "decoded") == password:
             print("Halo " + username + "! Selamat datang di 'BNMO'! ")
             return [[True], datauser]
         else:
-            print("Password tidak ditimeukan")
+            print("Password salah!")
             return [[False], datauser]
