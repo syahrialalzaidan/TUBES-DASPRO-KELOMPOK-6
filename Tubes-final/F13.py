@@ -1,14 +1,32 @@
-from fungsi import split
-from F08 import history #history = list berupa daftar pembelian dari F08
+from fungsi import csv_to_array,split, samecount
 
+user = csv_to_array("user.csv")
+# Isi array game -> [[id, nama, katergori, tahun rilis, harga, stok], [id, nama, katergori, tahun rilis, harga, stok]]
+game = csv_to_array("game.csv")
+# Isi array riwayat -> [[game id, nama, harga, user id, tahun beli], [game id, nama, harga, user id, tahun beli]]
+history = csv_to_array("riwayat.csv")
+#variabelnya gak bisa dinamain "riwayat" karena bakal rancu sama nama fungsinya
 
-def riwayat() :
-  data = open('game.csv', 'r') 
-  nomor = 1
-  for x in data.readlines() :
-    a = split(x) 
-    if a[0] in history :
-      print(f'{nomor}. {a[0]} | {a[1]} | {a[4]} | {a[3]} |')
-      nomor += 1
+# Isi array kepemilikan -> [[game id, user id], [game id, user id]]
+kepemilikan = csv_to_array("kepemilikan.csv")
 
+def riwayat(username) :
+    user_id = ''
+    found = False
+    nomor = 1
+
+    #cari user_id
+    for x in user :
+        if x[1] == username :
+            user_id = x[0]
+        else :
+            pass
+    
+    #ngefilter history berdasarkan user_id
+    for i in history :
+        if i[3] == user_id :
+            print(f'{nomor}. {(i[0])}  | {(i[1])} | {(i[2])} | {(i[4])} | ')
+            nomor += 1
+        else :
+            pass    
 riwayat()
