@@ -18,5 +18,5 @@ def login(data):
             print("Halo " + username + "! Selamat datang di 'BNMO'! ")
             return [[True], datauser]
         else:
-            print("Password tidak ditimeukan")
+            print("Password Salah!")
             return [[False], datauser]
