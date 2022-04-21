@@ -113,3 +113,48 @@ def csv_to_array(x) :
             continue
 
     return array_user
+
+# Biar jumlah huruf nya diakalin sama
+# Ini terpake untuk Fungsi09 biar output nya rapi
+def samecount(kata):
+    panjangkata = length(kata)
+    A = ['' for i in range (panjangkata)]
+    for i in range(panjangkata): 
+        A[i] = kata[i]
+
+    if panjangkata < 20: 
+        sisa_kata = 20 - panjangkata 
+        # Buat matriks baru yang berisi " " sebanyak panjang data
+        kosong = [" " for j in range(sisa_kata)]
+        for j in range(sisa_kata):
+            kosong[j] = " "
+        
+        kata_baru = A + kosong 
+        keluaran = ''
+        for char in kata_baru: 
+            keluaran += char
+    return keluaran 
+
+# Validasi Role
+data_user = csv_to_array('user.csv')
+datagame = csv_to_array('game.csv')
+data_kepemilikan = csv_to_array('kepemilikan.csv')
+
+def cekRole(username): 
+  for i in range(1,length(data_user)):
+    if (data_user[i][1]) == username:
+      return(data_user[i][4])
+
+def isAdmin(username):
+  if cekRole(username) == "Admin":
+    return True 
+  else:
+    return False
+
+
+def isUser(username):
+  if cekRole(username) == "User":
+    return True 
+  else:
+    return False
+
