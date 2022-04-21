@@ -1,10 +1,10 @@
-from HelperFunction import length, data_user, isUser,data_kepemilikan,datagame,samecount
-username_terbaru = input()
-def list_game(): 
+from fungsi import length,samecount
+
+def list_game(username, role, data_user, data_kepemilikan, datagame): 
   # Mencari ID Terlebih Dahulu 
   for i in range(length(data_user)):
-    if isUser(username_terbaru):
-       if username_terbaru == data_user[i][1]:
+    if role == "user":
+       if username == data_user[i][1]:
         user_now = data_user[i][0]
   list_game = []
   for i in range(1,length(data_kepemilikan)):
@@ -22,7 +22,7 @@ def list_game():
           print(f"{count}. {samecount(datagame[j][0])}   | {samecount(datagame[j][1])}   | {samecount(datagame[j][2])}   | {samecount(datagame[j][3])}   | {samecount(datagame[j][4])}")
   return ("Di atas ditampilkan game yang anda miliki.")
 
-if isUser(username_terbaru) == True:
-  print(list_game())
-else : 
-  print("Anda Tidak Memiliki Akses untuk Melihat Game yang Dimiliki")
+# if isUser(username) == True:
+#   print(list_game())
+# else : 
+#   print("Anda Tidak Memiliki Akses untuk Melihat Game yang Dimiliki")
