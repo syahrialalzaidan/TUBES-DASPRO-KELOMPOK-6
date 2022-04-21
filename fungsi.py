@@ -136,25 +136,25 @@ def samecount(kata):
     return keluaran 
 
 # Validasi Role
-data_user = csv_to_array('user.csv')
-datagame = csv_to_array('game.csv')
-data_kepemilikan = csv_to_array('kepemilikan.csv')
+# data_user = csv_to_array('user.csv')
+# datagame = csv_to_array('game.csv')
+# data_kepemilikan = csv_to_array('kepemilikan.csv')
 
-def cekRole(username): 
-  for i in range(1,length(data_user)):
-    if (data_user[i][1]) == username:
-      return(data_user[i][4])
+# def cekRole(username): 
+#   for i in range(1,length(data_user)):
+#     if (data_user[i][1]) == username:
+#       return(data_user[i][4])
 
-def isAdmin(username):
-  if cekRole(username) == "Admin":
-    return True 
-  else:
-    return False
+# def isAdmin(username):
+#   if cekRole(username) == "Admin":
+#     return True 
+#   else:
+#     return False
 
 
-def isUser(username):
-  if cekRole(username) == "User":
-    return True 
-  else:
-    return False
+# def isUser(username):
+#   if cekRole(username) == "User":
+#     return True 
+#   else:
+#     return False
 
