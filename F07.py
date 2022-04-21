@@ -81,8 +81,8 @@ def list_game_toko(data):
 
 
 # Buat di test
-data = [["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2022" , "10", "1"],
-        ["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2021" , "100", "1"],
-        ["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2019" , "10000", "1"]]
+# data = [["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2022" , "10", "1"],
+#         ["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2021" , "100", "1"],
+#         ["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2019" , "10000", "1"]]
 
-list_game_toko(data)
+# list_game_toko(data)
