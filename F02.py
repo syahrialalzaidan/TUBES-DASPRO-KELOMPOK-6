@@ -1,7 +1,7 @@
 import fungsi
 def cekusername(username):
     for i in username:
-        if ord(i) == 45 or ord(i) == 95 or 65 <= ord(i) <= 90 or 97 <= ord(i) <= 112 or 48 <= ord(i) <= 57:
+        if ord(i) == 45 or ord(i) == 95 or 65 <= ord(i) <= 90 or 97 <= ord(i) <= 122 or 48 <= ord(i) <= 57:
             return True
         else:
             return False
