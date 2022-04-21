@@ -10,7 +10,7 @@ def login(data):
     # Mencek apakah usernamenya ada atau tidak
     if not datauser:
         print("Username tidak ditemukan!")
-        return False
+        return [[False],[]]
 
     # Mencek password
     else:
