@@ -4,7 +4,11 @@ from F15 import load
 import fungsi
 
 # Menjalankan fungsi load
-load()
+folder = load()
+if folder:
+    pass
+else:
+    exit()
 
 # Ini kalau ada solusi buat cara biar diawalnya engga banyak banget import gitu kasih tau yak
 # Sama buat program buat khusus admin doang, aku belum buat fungsi biar bisa cepet
