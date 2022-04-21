@@ -92,3 +92,24 @@ def indeksdata(data, urutan, cek):
         else:
             indeks += 1
     return (-1)
+
+def csv_to_array(x) :
+    #bikin array dari  user.csv
+    file = open(x, 'r')
+    array_user = [['' for x in range(6)] for i in range(count_csv_row(x))]
+    i = 0 
+    kolom = count_csv_column(x)
+
+    #csv to array
+    for x in file.readlines() :
+        array_user[i] = split(x)
+        i += 1
+    
+    #data cleansing buat yang ada "\n"
+    for x in array_user :
+        if '\n' in x[kolom-1] :
+            x[kolom-1] = (x[kolom-1][:-1])
+        else :
+            continue
+
+    return array_user
