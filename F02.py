@@ -24,7 +24,7 @@ def register(data):
 
     # Membuat ID baru
     id = int(data[-1][0]) + 1
-    userbaru = [str(id), username, nama, password, "User", "0"]
+    userbaru = [[str(id), username, nama, password, "User", "0"]]
     data = data + userbaru
 
     # Mencek apakah usernamenya sudah ada atau tidak
