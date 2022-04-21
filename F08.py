@@ -1,4 +1,4 @@
-from HelperFunction import length, count_csv_row
+from fungsi import length, count_csv_row
 
 history = ['' for x in range(count_csv_row('game.csv'))]
 # username_terbaru = input()
