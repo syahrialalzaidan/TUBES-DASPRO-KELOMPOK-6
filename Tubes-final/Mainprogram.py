@@ -131,7 +131,6 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     elif perintah == "topup":
         if role == "Admin":
             user = F12.topup()
-            print(user)
         else:
             print("Maaf, hanya Admin yang dapat menjalankan program ini! ")
 
