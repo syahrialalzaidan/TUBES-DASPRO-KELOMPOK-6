@@ -75,7 +75,7 @@ def count_csv_column(file) :
 
 def caridatalist(data,urutan,cek):
 # Kaya fungsi caridata tapi buat di matiksnya
-    for i in data:
+    for i in range(length(data)):
         if data[i][urutan] == cek:
             return data[i]
         else:
