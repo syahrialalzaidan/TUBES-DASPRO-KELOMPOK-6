@@ -7,7 +7,7 @@ def tictactoe():
         # Pergantian giliran
         if k == 9:
             print("Seri. Tidak ada pemenang")
-            break
+            return
         elif k % 2 == 0:
             simbol = 'X'
         else:
@@ -43,13 +43,13 @@ def tictactoe():
             if (papan[m][0] == simbol and papan[m][1] == simbol and papan[m][2] == simbol) or \
                     (papan[0][m] == simbol and papan[1][m] == simbol and papan[2][m] == simbol):
                 print("Pemenangnya " + simbol)
-                break
+                return
             else:
                 continue
             # Cek diagonal ke kanan bawah dan kiri bawah
         if (papan[0][0] == simbol and papan[1][1] == simbol and papan[2][2] == simbol) or \
                 (papan[0][2] == simbol and papan[1][1] == simbol and papan[2][0] == simbol):
             print("Pemenangnya " + simbol)
-            break
+            return
         else:
             continue
