@@ -1,4 +1,5 @@
 import fungsi
+import B01
 def cekusername(username):
     for i in username:
         if ord(i) == 45 or ord(i) == 95 or 65 <= ord(i) <= 90 or 97 <= ord(i) <= 122 or 48 <= ord(i) <= 57:
@@ -21,7 +22,8 @@ def register(data):
 
     # Input password
     password = input("Masukan password: ")
-
+    password = B01.CaesarChiper("something", 7, password, "encoded")
+    
     # Membuat ID baru
     id = int(data[-1][0]) + 1
     userbaru = [[str(id), username, nama, password, "User", "0"]]
