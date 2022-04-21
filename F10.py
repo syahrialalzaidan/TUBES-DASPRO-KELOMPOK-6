@@ -1,7 +1,7 @@
 from fungsi import csv_to_array, split, count_csv_column,count_csv_row, samecount
-username = input('Masukkan Username: ') #kalo belom diinput dan kalo udah ada berarti harus ganti variabel di fungsinya
+# username = input('Masukkan Username: ') #kalo belom diinput dan kalo udah ada berarti harus ganti variabel di fungsinya
 
-def search_my_game() :
+def search_my_game(username) :
     inventory = csv_to_array('kepemilikan.csv')
     data_game = csv_to_array('game.csv')
     nomor = 1
