@@ -38,7 +38,7 @@ user = fungsi.csv_to_array("user.csv")
 # Isi array game -> [[id, nama, katergori, tahun rilis, harga, stok], [id, nama, katergori, tahun rilis, harga, stok]]
 game = fungsi.csv_to_array("game.csv")
 # Isi array riwayat -> [[game id, nama, harga, user id, tahun beli], [game id, nama, harga, user id, tahun beli]]
-riwayat = fungsi.csv_to_array("riwayat.csv")
+history = fungsi.csv_to_array("riwayat.csv")
 # Isi array kepemilikan -> [[game id, user id], [game id, user id]]
 kepemilikan = fungsi.csv_to_array("kepemilikan.csv")
 
@@ -138,7 +138,7 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     # F13 - riwayat 
     elif perintah == "riwayat":
         if role == "User":
-            F13.riwayat()
+            F13.riwayat(username)
     
     # F14 - help
     elif perintah == "help":
@@ -146,11 +146,11 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     
     # F16 - save
     elif perintah == "save":
-        F16.save(game, kepemilikan, riwayat, user)
+        F16.save(game, kepemilikan, history, user)
     
     # F17 - exit
     elif perintah == "exit":
-        F17.exit(game, kepemilikan, riwayat, user)  
+        F17.exit(game, kepemilikan, history, user)  
     
     # B02 - kerangajaib
     elif perintah == "kerangajaib":
