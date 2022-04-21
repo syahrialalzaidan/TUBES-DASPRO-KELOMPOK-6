@@ -7,10 +7,7 @@ def search_my_game() :
     nomor = 1
     #nyari game yang dimiliki 
     my_game = []
-    count = 0 
     found = False
-    for y in my_game :
-        count += 1
     for x in inventory :
         if username == x[1] :
             my_game += [x[0]]
