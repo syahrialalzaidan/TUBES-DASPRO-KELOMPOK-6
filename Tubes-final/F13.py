@@ -24,3 +24,5 @@ def riwayat(username) :
             nomor += 1
         else :
             pass    
+    if not found :
+        print('Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.')   
