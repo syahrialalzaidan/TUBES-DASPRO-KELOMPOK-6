@@ -1,8 +1,9 @@
-from fungsi import split,samecount
+from re import L
+from fungsi import csv_to_array, split,samecount
 
-def search_game_at_store () :
+
+def search_game_at_store (game) :
     try :
-        data = open('game.csv', 'r')
         nomor = 1
         found = False 
         spek_game = ['' for x in range(5)]
@@ -13,10 +14,24 @@ def search_game_at_store () :
         spek_game[2] = input('Masukkan Kategori Game: ')
         spek_game[3] = input('Masukkan Tahun Rilis Game: ')
         print('Daftar game pada toko yang memenuhi kriteria: ')
-        if '' not in spek_game :
-            for x in data.readlines() :
-                a = split(x)
+        
+        lengkap = True
+        sebagian = False
+        for x in spek_game :
+            if x == '' :
+                lengkap = False
+            elif x == spek_game[4] :
+                if x == '' and not sebagian:
+                    lengkap = False
+                elif x == '' and sebagian :
+                    pass
+            else :
+                sebagian = True
+        
+        if lengkap :
+            for a in game :
                 b = ['' for x in range(5)]
+                #b = a tanpa komponen terakhir(stok)
                 for x in range(5) :
                     b[x] = a[x]
                 
@@ -31,15 +46,13 @@ def search_game_at_store () :
 
     else :
         if spek_game == kosong :
-            for x in data.readlines() :
-                a = split(x)
+            for a in game :
                 #ngatur ulang list biar sesuai yang diminta abangnya
                 if a[0] != 'id' : 
                     print(f'{nomor}. {(a[0])}  | {(a[1])} | {(a[4])} | {(a[2])} | {(a[3])} | {(str(a[5][:-1]))}')  #kalo ini dipakein samecount jadi error
                     nomor += 1
-        elif '' in spek_game : 
-            for x in data.readlines() :
-                a = split(x)
+        elif sebagian and not lengkap : 
+            for a in game :
                 b = ['' for x in range(5)]
 
                 for i in range(5) :
@@ -50,7 +63,11 @@ def search_game_at_store () :
                     if spek_game[y] == '' :
                         continue
                     else :
-                        if spek_game[y] in b :
+                        nemu_b = False 
+                        for x in b :
+                            if x == spek_game[y] :
+                                nemu_b = True
+                        if nemu_b :
                             continue
                         else :
                             sama = False
@@ -62,4 +79,4 @@ def search_game_at_store () :
                 print('Tidak ada game pada toko yang memenuhi kriteria')
 
 
-# search_game_at_store()
+#search_game_at_store()
