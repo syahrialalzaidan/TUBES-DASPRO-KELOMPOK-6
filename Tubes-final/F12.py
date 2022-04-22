@@ -1,20 +1,13 @@
-from fungsi import count_csv_row,split
+from fungsi import count_csv_row,split,csv_to_array
 
 def topup() : 
     #kalo mau ngambil data array buat csvnya, pake fungsi topup() karena return berupa array
     #misal x = topup(), maka x itu array "array_user" yang udah di update saldonya
 
     #bikin array dari  user.csv
-    file = open('user.csv', 'r')
-    array_user = [['' for x in range(6)] for i in range(count_csv_row('user.csv'))]
-    i = 0 
-
-    #csv to array
-    for x in file.readlines() :
-        array_user[i] = split(x)
-        i += 1
+    array_user  = csv_to_array('user.csv')
     
-    #data cleansing buat yang ada "\n"
+    #data cleansing buat yang ada "\n" dan convert x[5] jadi integer
     for x in array_user :
         if x[0] == 'id':
             pass
