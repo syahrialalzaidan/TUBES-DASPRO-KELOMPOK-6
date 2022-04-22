@@ -118,26 +118,26 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     # F10 - search_my_game
     elif perintah == "search_my_game":
         if role == "User":
-            F10.search_my_game(IDuser)
+            F10.search_my_game(IDuser, game, kepemilikan)
         else:
             print("Maaf, hanya user yang dapat menjalankan program ini!")
         
     
     # F11 - search_game_at_store
     elif perintah == "search_game_at_store":
-        F11.search_game_at_store()
+        F11.search_game_at_store(game)
     
     # F12 - topup
     elif perintah == "topup":
         if role == "Admin":
-            user = F12.topup()
+            user = F12.topup(user)
         else:
             print("Maaf, hanya Admin yang dapat menjalankan program ini! ")
 
     # F13 - riwayat 
     elif perintah == "riwayat":
         if role == "User":
-            F13.riwayat(username)
+            F13.riwayat(username, user, history)
     
     # F14 - help
     elif perintah == "help":
@@ -162,5 +162,3 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     # Perintah tidak valid
     else:
         print("Perintah tidak valid. Ketik 'help' untuk melihat opsi perintah yang bisa digunakan.")  
-
-
