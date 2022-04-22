@@ -83,7 +83,7 @@ def CaesarChiper(kunci, shift, teks, tipe):
 
                 # Mengubah angka indeks menjadi huruf
                 if indekshuruf < 0:
-                    huruf = chr(indekshuruf + 124)
+                    huruf = chr(indekshuruf + 123)
                     if 65 <= ord(m) <= 90:
                         huruf = huruf.upper()
                 else:
