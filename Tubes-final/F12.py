@@ -1,18 +1,18 @@
 from fungsi import count_csv_row,split,csv_to_array
 
-def topup() : 
+def topup(user) : 
     #kalo mau ngambil data array buat csvnya, pake fungsi topup() karena return berupa array
     #misal x = topup(), maka x itu array "array_user" yang udah di update saldonya
 
     #bikin array dari  user.csv
-    array_user  = csv_to_array('user.csv')
+    array_user  = user
     
     #data cleansing buat yang ada "\n" dan convert x[5] jadi integer
     for x in array_user :
         if x[0] == 'id':
             pass
         else:
-            if '\n' in x[5] :
+            if x != array_user[-1] :
                 x[5] = int(x[5][:-1])
             else :
                 x[5] = int(x[5])
@@ -51,6 +51,3 @@ def topup() :
     else :
         print('Masukan tidak valid')
         return array_user
-
-# topup() bakal ngejalanin program sesuai prosedur tapi arraynya gak di save ke mana-mana
-# array_user = topup() bakal ngejalanin program sesuai prosedur dan nyimpen value arraynya ke variabel "array_user" meskipun masukan tidak valid
