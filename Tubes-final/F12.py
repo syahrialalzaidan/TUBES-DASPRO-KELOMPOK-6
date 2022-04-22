@@ -12,10 +12,7 @@ def topup(user) :
         if x[0] == 'id':
             pass
         else:
-            if x != array_user[-1] :
-                x[5] = int(x[5][:-1])
-            else :
-                x[5] = int(x[5])
+            x[5] = int(x[5])
         
     username = input('Masukan username: ')
     ammount = int(input('Masukkan saldo: '))
