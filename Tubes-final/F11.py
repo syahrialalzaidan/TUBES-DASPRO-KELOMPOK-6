@@ -20,11 +20,6 @@ def search_game_at_store (game) :
         for x in spek_game :
             if x == '' :
                 lengkap = False
-            elif x == spek_game[4] :
-                if x == '' and not sebagian:
-                    lengkap = False
-                elif x == '' and sebagian :
-                    pass
             else :
                 sebagian = True
         
