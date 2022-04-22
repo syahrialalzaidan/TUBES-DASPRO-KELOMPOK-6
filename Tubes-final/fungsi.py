@@ -107,7 +107,7 @@ def csv_to_array(x) :
     
     #data cleansing buat yang ada "\n"
     for x in array_user :
-        if '\n' in x[kolom-1] :
+        if x !=  array_user[-1] :
             x[kolom-1] = (x[kolom-1][:-1])
         else :
             continue
