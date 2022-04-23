@@ -3,9 +3,10 @@ import B01
 def cekusername(username):
     for i in username:
         if ord(i) == 45 or ord(i) == 95 or 65 <= ord(i) <= 90 or 97 <= ord(i) <= 122 or 48 <= ord(i) <= 57:
-            return True
+            continue
         else:
             return False
+    return True
 
 
 def register(data):
