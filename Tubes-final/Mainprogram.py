@@ -114,6 +114,8 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     elif perintah == "list_game":
         if role == "User":
             F09.list_game(username, role, user, kepemilikan, game)
+        else:
+            print("Maaf, hanya user yang dapat menjalankan program ini!")
     
     # F10 - search_my_game
     elif perintah == "search_my_game":
@@ -138,6 +140,8 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
     elif perintah == "riwayat":
         if role == "User":
             F13.riwayat(username, user, history)
+        else:
+            print("Maaf, hanya user yang dapat menjalankan program ini!")
     
     # F14 - help
     elif perintah == "help":
