@@ -36,8 +36,12 @@ def save(dataGame, dataKepemilikan, dataRiwayat, dataUser):
     # ALGORITMA
     for i in range(length(arrData)):
       for data in arrData[i]:
-        fileData.write("{};".format(str(data)))
-      fileData.write('\n')
+        if data == arrData[i][0]:
+          fileData.write(str(data))
+        else:
+          fileData.write(";{}".format(str(data)))
+      if arrData[i] != arrData[-1]:
+        fileData.write('\n')
 
   # Menerima masukan pengguna berupa nama folder dan melakukan validasi folder
   os.chdir("..")
@@ -70,6 +74,8 @@ def save(dataGame, dataKepemilikan, dataRiwayat, dataUser):
   fileRiwayat.close()
   fileUser.close()  
 
+  os.chdir("./{}".format(nama_folder))
+  
   # Menampilkan pesan feedback
   print("saving...")
   print("Data telah disimpan pada folder {}".format(nama_folder))
