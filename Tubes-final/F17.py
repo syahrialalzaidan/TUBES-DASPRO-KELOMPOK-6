@@ -6,6 +6,7 @@
 
 # ALGORITMA
 # Validasi jawaban
+import os
 def exit(dataGame, dataKepemilikan, dataRiwayat, dataUser): 
   while True:
     jawaban = input("Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ")
@@ -15,8 +16,10 @@ def exit(dataGame, dataKepemilikan, dataRiwayat, dataUser):
   # Pemrosesan jawaban
   if jawaban == 'y' or jawaban == 'Y':
     save(dataGame, dataKepemilikan, dataRiwayat, dataUser)
+    os.chdir("..")
     quit()
   else: # jawaban == 'n' or jawaban == 'N'
     # langsung exit
+    os.chdir("..")
     quit()
     
