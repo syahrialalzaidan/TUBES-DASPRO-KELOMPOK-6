@@ -31,7 +31,7 @@ def list_game_toko(data):
 
     # Kalau kosong, langsung print semua (harusnya list 'data' udah terurut ID nya)
     if skema == "":
-        outputF07(data)
+        outputF07(datacopy)
         return
 
     else:
@@ -49,13 +49,13 @@ def list_game_toko(data):
             return
 
         # Skema sorting (liat dari edunex :v)
-        n = fungsi.length(data)
+        n = fungsi.length(datacopy)
         for i in range(1, n-1):
             # Buat sorting yang naik (cari indeks yang nilai min dimana)
             if skema[-1] == "+":
                 kecilbesar = i
                 for j in range(i+1, n):
-                    if int(data[j][indeks]) < int(data[kecilbesar][indeks]):
+                    if int(datacopy[j][indeks]) < int(datacopy[kecilbesar][indeks]):
                         kecilbesar = j
                     else:
                         continue
@@ -64,7 +64,7 @@ def list_game_toko(data):
             elif skema[-1] == "-":
                 kecilbesar = i
                 for k in range(i+1, n):
-                    if int(data[k][indeks]) > int(data[kecilbesar][indeks]):
+                    if int(datacopy[k][indeks]) > int(datacopy[kecilbesar][indeks]):
                         kecilbesar = k
                     else:
                         continue
@@ -75,11 +75,11 @@ def list_game_toko(data):
                 return
 
             # Tukeran data
-            temp = data[kecilbesar]
-            data[kecilbesar] = data[i]
-            data[i] = temp
+            temp = datacopy[kecilbesar]
+            datacopy[kecilbesar] = datacopy[i]
+            datacopy[i] = temp
 
         # output data
-        outputF07(data)
+        outputF07(datacopy)
 
     return
