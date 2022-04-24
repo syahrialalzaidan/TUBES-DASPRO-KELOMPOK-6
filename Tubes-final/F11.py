@@ -1,8 +1,12 @@
-from re import L
-from fungsi import csv_to_array, split,samecount
-
+from fungsi import samecount
 
 def search_game_at_store (game) :
+    #KAMUS LOKAL
+    #nomor : integer
+    #found, lengkap, sebagian : boolean
+    #spek_game,kosong : array of string
+    
+    #ALGORITMA
     try :
         nomor = 1
         found = False 
