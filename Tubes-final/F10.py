@@ -1,5 +1,13 @@
 def search_my_game(username,game,kepemilikan) :
+    #KAMUS LOKAL
+    #nomor  : integer
+    #my_game : array of string
+    #id : string
+    #tahun : string
+    #found,punya : Boolean
 
+
+    #ALGORITMA
     nomor = 1
     #nyari game yang dimiliki 
     my_game = []
