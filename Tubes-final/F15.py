@@ -1,8 +1,8 @@
 # Fungsi load
-# Fungsi yang akan mengecek folder yang diberikan untuk memulai program dan menyalin data dari user.csv ke suatu array. Dijalankan automatis ketika program dijalankan
+# Fungsi yang akan mengecek folder yang diberikan untuk memulai program. Dijalankan automatis ketika program dijalankan
 
 # KAMUS
-# nama_folder : string
+# folder : boolean
 
 # ALGORITMA
 def load():
@@ -10,7 +10,7 @@ def load():
   import argparse 
   parser = argparse.ArgumentParser()
   # Menerima input berupa nama folder
-  nama_folder = parser.add_argument("nama_folder", nargs="?", help="Masukkan nama folder", type=str)
+  parser.add_argument("nama_folder", nargs="?", help="Masukkan nama folder", type=str)
   args = parser.parse_args()
 
   # Mengimport os yag akan digunakan untuk validasi folder
