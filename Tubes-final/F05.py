@@ -59,4 +59,5 @@ def ubahGame(data):
     # Memasukan data baru tersebut ke list game
     indeks = fungsi.indeksdata(data, 0, id)
     data[indeks] = datagame
+    print("Data game berhasil diubah!")
     return data
