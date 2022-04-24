@@ -3,6 +3,14 @@ import B01
 
 
 def login(data):
+    # Fungsi melakukan login dan mengelurankan list berupa boolean dan data dari user tersebut
+    # I.S. : data tidak kosong 
+	# F.S. : Procedur menginput username dan password lalu divalidasi apakah sudah benar,
+    #        jika sudah maka akan mengeluarkan variable Boolean berupa True dan data dari user tersebut 
+
+    # Kamus lokal
+    # username : string
+    # password : string
     # Input usename, password, serta data usernamnya
     username = input("Masukan username: ")
     password = input("Masukan password: ")
