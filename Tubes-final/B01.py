@@ -1,4 +1,8 @@
 def index(data, cek):
+    # Fungsi untuk mencari indeks dari sebuah data pada suatu array
+    # Kamus lokal
+    # index : integer
+    # i : integer
     index = 0
     for i in data:
         if i == cek:
@@ -9,6 +13,19 @@ def index(data, cek):
 
 
 def CaesarChiper(kunci, shift, teks, tipe):
+    # Fungsi mengubah suatu teks menjadi teks lain yang acak menrut kata kunci serta shiftnya, 
+    # algoritma chiper ini mengikuti algoritma Keyed Caesar Chiper
+    
+    # Kamus lokal
+    # alphabet : array of integer
+    # keymaker : array of integer
+    # indeks : integer
+    # text : string
+    # huruf : char
+    # m : integer
+    # hasil : string
+    
+    # indekshuruf : integer
     # Variabel yang akan digunakan
     alphabet = [i for i in range(26)]
     keymaker = [-1 for i in range(26)]
@@ -93,10 +110,3 @@ def CaesarChiper(kunci, shift, teks, tipe):
 
                 hasil += huruf
     return hasil
-
-# Test
-kata = "password"
-katabaru = CaesarChiper("nani", 3, kata, "encoded")
-katalama = CaesarChiper("nani", 3, katabaru, "decoded")
-print(katabaru)
-print(katalama)
