@@ -1,7 +1,8 @@
 # Fungsi save
-# Fungsi yang melakukan penyimpanan data ke file  
+# Fungsi yang melakukan penyimpanan data ke file dalam suatu folder 
 
 # KAMUS
+# nama_folder : string
 
 # ALGORITMA
 def save(dataGame, dataKepemilikan, dataRiwayat, dataUser):
