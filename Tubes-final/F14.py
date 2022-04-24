@@ -2,7 +2,7 @@
 # fungsi yang menampilkan panduan penggunaan sistem. Tidak perlu melakukan login terlebih dahulu untuk menggunakan fungsi ini
 
 # KAMUS
-# username : string
+# role : string
 
 # ALGORITMA
 def helpSetelahLogin(role):
