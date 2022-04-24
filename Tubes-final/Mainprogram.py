@@ -1,5 +1,34 @@
-# Program utamanya
+# Program BNMO
 
+# KAMUS
+# type gameData : < id : string;
+# 				nama : string;
+# 				kategori : string;
+# 				tahun_rilis : string;
+# 				harga : string;
+# 				stok : string >
+# type userData : < id : string;
+# 				username : string;
+# 				nama : string;
+# 				password : string;
+# 				role : string;
+# 				saldo : string >
+# type historyData : < game_id : string;
+# 				   nama : string;
+# 				   harga : integer;
+# 				   user_id : string;
+# 				   tahun_beli : string >
+# type kepemilikanData : < game_id : string;
+# 					  user_id : string >
+# folder : boolean
+# user : array of userData
+# game : array of gameData
+# history : array of historyData
+# kepemilikan : array of kepemilikanData
+# perintah : string
+
+
+# ALGORITMA
 from F15 import load
 import fungsi
 
@@ -10,9 +39,7 @@ if folder:
 else:
     exit()
 
-# Ini kalau ada solusi buat cara biar diawalnya engga banyak banget import gitu kasih tau yak
-# Sama buat program buat khusus admin doang, aku belum buat fungsi biar bisa cepet
-
+# Mengimport fungsi-fungsi
 import F02
 import F03
 import F04
@@ -65,10 +92,10 @@ IDuser = datauser[1][0]
 
 
 # Program Utamanya
-while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopnya kalau perlu
+while True:     
     perintah = input(">>> ")
 
-    # F02
+    # F02 - register
     if perintah == "register":
         if role == "Admin":
             user = F02.register(user)
@@ -76,7 +103,7 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
         else:
             print("Maaf, hanya Admin yang dapat menjalankan program ini! ")
 
-    # F04
+    # F04 - tambah_game
     elif perintah == "tambah_game":
         if role == "Admin":
             game = F04.tambahGame(game)
@@ -84,7 +111,7 @@ while True:     # Ini buat di 'break' pake fungsi exit, ubah aja cara nge loopny
         else:
             print("Maaf, hanya Admin yang dapat menjalankan program ini! ")
 
-    # F05
+    # F05 - ubah_game
     elif perintah == "ubah_game":
         if role == "Admin":
             game = F05.ubahGame(game)
