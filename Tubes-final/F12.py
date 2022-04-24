@@ -3,7 +3,7 @@ def topup(user) :
     #array_user : array of array of string
     #username : string
     #ammount : integer
-    #found, valid,
+    #found, valid,negatif : boolean
 
     #ALGORITMA
 
@@ -24,6 +24,7 @@ def topup(user) :
     found = False
     print()
     valid = True
+    negatif = False 
 
     #Validasi apakah input valid
     for x in array_user :
@@ -34,6 +35,7 @@ def topup(user) :
                 found = True 
                 user = x
                 if ammount < 0 : 
+                    negatif = True
                     if (x[5] + ammount) < 0 :
                         valid = False
                     else :
@@ -45,9 +47,11 @@ def topup(user) :
 
 
     #Mengeluarkan output berdasarkan hasil validasi
-    if found and valid :
+    if found and valid and not negatif:
         print('Top up berhasil. Saldo', user[2], 'bertambah menjadi', user[5] ) #BUAT NGASIH OUTPUT KE PENGGUNA
         return array_user
+    elif found and valid and negatif :
+        print('Top up berhasil. Saldo', user[2], 'berkurang menjadi', user[5] ) 
     elif valid and not found :
         print(f'Username "{username}" tidak ditemukan')
         return array_user
