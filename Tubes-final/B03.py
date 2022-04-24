@@ -1,6 +1,21 @@
 def tictactoe():
+    # I.S. : -
+	# F.S. : procedur untuk melakukan permainan tictactoe dan setiap giliran akan mencetak kondisi papan
+    # Kamus lokal
+    # papan : array of array of string
+    # simbol : char
+    # i,j,k,m : integer
+    # x : integer
+    # y : integer
+
     papan = [["#", "#", "#"], ["#", "#", "#"], ["#", "#", "#"]]
-    simbol = ''
+
+    # Informasi awal
+    print("Legenda:")
+    print("# Kosong \nX Pemain 1 \nO Pemain 2")
+    print("X dan Y bernilai [1,3]\n")
+    print("Status papan: \n###\n###\n###")
+
 
     # Pengulangan
     for k in range(10):
