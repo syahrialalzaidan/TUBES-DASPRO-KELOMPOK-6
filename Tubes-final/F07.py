@@ -21,6 +21,11 @@ def bagianTeks(teks, urutAwal, urutAkhir):
 
 
 def list_game_toko(data):
+    # Mengcopy isi dari game
+    datacopy = []
+    for isi in data:
+        datacopy += [isi]
+        
     # Menginput skema sortingnya
     skema = input("Skema sorting: ").lower()
 
@@ -70,19 +75,11 @@ def list_game_toko(data):
                 return
 
             # Tukeran data
-            temp = data[kecilbesar][indeks]
-            data[kecilbesar][indeks] = data[i][indeks]
-            data[i][indeks] = temp
+            temp = data[kecilbesar]
+            data[kecilbesar] = data[i]
+            data[i] = temp
 
         # output data
         outputF07(data)
 
     return
-
-
-# Buat di test
-# data = [["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2022" , "10", "1"],
-#         ["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2021" , "100", "1"],
-#         ["GAME001", "BNMO - Play Along With Crypto" , "Adventure" , "2019" , "10000", "1"]]
-
-# list_game_toko(data)
