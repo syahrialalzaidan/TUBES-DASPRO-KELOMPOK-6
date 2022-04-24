@@ -47,3 +47,4 @@ def register(data):
         return data
     else:
         print("Username " + username + " sudah ada. Silahkan gunakan username lain!")
+        return data
