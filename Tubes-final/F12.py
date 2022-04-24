@@ -1,25 +1,31 @@
-from fungsi import count_csv_row,split,csv_to_array
-
 def topup(user) : 
+    #KAMUS LOKAL :
+    #array_user : array of array of string
+    #username : string
+    #ammount : integer
+    #found, valid,
+
+    #ALGORITMA
+
     #kalo mau ngambil data array buat csvnya, pake fungsi topup() karena return berupa array
     #misal x = topup(), maka x itu array "array_user" yang udah di update saldonya
-
-    #bikin array dari  user.csv
     array_user  = user
     
-    #data cleansing buat yang ada "\n" dan convert x[5] jadi integer
+    #mengubah data saldo menjadi integer
     for x in array_user :
         if x[0] == 'id':
             pass
         else:
             x[5] = int(x[5])
-        
+    
+    #menerima input username dan saldo yang ingin ditambahkan     
     username = input('Masukan username: ')
     ammount = int(input('Masukkan saldo: '))
     found = False
     print()
-    user = []
     valid = True
+
+    #Validasi apakah input valid
     for x in array_user :
         if x[0] == 'id':
             pass
@@ -38,7 +44,7 @@ def topup(user) :
     array_user[0][5] = array_user[0][5][:-1]
 
 
-
+    #Mengeluarkan output berdasarkan hasil validasi
     if found and valid :
         print('Top up berhasil. Saldo', user[2], 'bertambah menjadi', user[5] ) #BUAT NGASIH OUTPUT KE PENGGUNA
         return array_user
