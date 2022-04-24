@@ -38,7 +38,7 @@ def search_game_at_store (game) :
                 
                 if b == spek_game :
                     found = True
-                    print(f'{nomor}. {samecount(a[0])}  | {samecount(a[1])} | {samecount(a[2])} | {samecount(a[3])} | {samecount(a[4])} | {samecount(str(a[5][:-1]))}')
+                    print(f'{nomor}. {samecount(a[0])}  | {samecount(a[1])} | {samecount(a[4])} | {samecount(a[2])} | {samecount(a[3])} | {samecount(str(a[5][:-1]))}')
                     nomor += 1
             if not found :
                 print('Tidak ada game pada toko yang memenuhi kriteria')
@@ -77,7 +77,7 @@ def search_game_at_store (game) :
                             sama = False
                 if sama :
                     found = True
-                    print(f'{nomor}. {(a[0])}  | {(a[1])} | {(a[2])} | {(a[3])} | {(a[4])} | {(str(a[5][:-1]))}')
+                    print(f'{nomor}. {(a[0])}  | {(a[1])} | {(a[4])} | {(a[2])} | {(a[3])} | {(str(a[5][:-1]))}')
                     nomor += 1
             if not found :
                 print('Tidak ada game pada toko yang memenuhi kriteria')
