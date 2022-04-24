@@ -52,6 +52,7 @@ def topup(user) :
         return array_user
     elif found and valid and negatif :
         print('Top up berhasil. Saldo', user[2], 'berkurang menjadi', user[5] ) 
+        return array_user
     elif valid and not found :
         print(f'Username "{username}" tidak ditemukan')
         return array_user
