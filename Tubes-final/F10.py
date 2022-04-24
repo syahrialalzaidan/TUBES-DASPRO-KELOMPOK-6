@@ -1,10 +1,5 @@
-from fungsi import csv_to_array, split, count_csv_column,count_csv_row, samecount
-
-# username = input('Masukkan Username: ') #kalo belom diinput dan kalo udah ada berarti harus ganti variabel di fungsinya
-
 def search_my_game(username,game,kepemilikan) :
-    #inventory = csv_to_array('kepemilikan.csv')
-    #data_game = csv_to_array('game.csv')
+
     nomor = 1
     #nyari game yang dimiliki 
     my_game = []
@@ -13,11 +8,12 @@ def search_my_game(username,game,kepemilikan) :
         if username == x[1] :
             my_game += [x[0]]
 
+    #memakai try karena berpotensi menerima input kosong
     try :
         id = input('Masukan ID Game: ')
         tahun = input('Masukkan Tahun Rilis Game: ')
         if id != '' and tahun != '' :
-            #if id in my_game :
+            #menentukan apakah punya atau tidak melalui looping
             punya = False
             for x in my_game :
                 if x == id :
@@ -26,6 +22,7 @@ def search_my_game(username,game,kepemilikan) :
                 for x in game :
                     if x[0] == id and x[3] == tahun :
                         found = True
+                        #mengeluarkan output sesuai yang diminta
                         print(f'{nomor}. {(x[0])}   | {(x[1])} | {(x[4])}    | {(x[2])} | {(x[3])}')
                         nomor += 1
 
@@ -35,7 +32,9 @@ def search_my_game(username,game,kepemilikan) :
         pass
     else :
         if id == '' and tahun != '' :
+            #memfilter tiap game yang ada di toko
             for x in game :
+                #menentukan kepemilikan game
                 punya = False
                 for y in my_game :
                     if x[0] == y :
@@ -49,6 +48,7 @@ def search_my_game(username,game,kepemilikan) :
                 print('Tidak ada game pada inventory-mu yang memenuhi kriteria')
             
         elif id != '' and tahun == '' :
+            #menentukan kepemilikan game
             punya = False
             for x in my_game :
                 if x == id :
