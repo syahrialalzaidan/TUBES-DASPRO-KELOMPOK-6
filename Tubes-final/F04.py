@@ -1,4 +1,7 @@
 def cekkosong(nama):
+    # Menginput sebuah string lalu mengeluarkan False jika string tidak kosong dan True jika string kosong 
+    # Kamus lokal
+    # i : char
     for i in nama:
         if i != " " and i != "":
             return False
@@ -9,6 +12,16 @@ def cekkosong(nama):
 
 
 def tambahGame(data):
+    # Kamus lokal
+    # nama : string
+    # kategori : string
+    # harga : string
+    # stok : string
+    # id : string
+    # angka : string
+    # i : integer
+    # idangka : integer
+    
     # Menginput serta mencek data game yang dimasukan
     while True:
         nama = input("Masukan nama game: ")
@@ -31,12 +44,11 @@ def tambahGame(data):
     
     # Menambah digit awal
     if idAngka < 10:
-        id = "00" + str(idAngka)
+        id = "GAME00" + str(idAngka)
     elif idAngka < 100:
-        id = "0" + str(idAngka)
+        id = "GAME0" + str(idAngka)
     else:
-        id = str(idAngka)
-    id = "GAME" + id
+        id = "GAME" + str(idAngka)
 
     # Menambahkan game ke list game
     data = data + [[id, nama, kategori, tahunrilis, harga, stok]]
