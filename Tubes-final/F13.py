@@ -1,11 +1,12 @@
-from fungsi import csv_to_array,split, samecount
+def riwayat(username, user, history) :
+    #KAMUS LOKAL 
+    #user_id : string
+    #found : boolean
+    #nomor : integer
 
-user = csv_to_array("user.csv")
-# Isi array game -> [[id, nama, katergori, tahun rilis, harga, stok], [id, nama, katergori, tahun rilis, harga, stok]]
-history = csv_to_array("riwayat.csv")
-#variabelnya gak bisa dinamain "riwayat" karena bakal rancu sama nama fungsinya
+    #ALGORITMA
 
-def riwayat(username) :
+    #Deklarasi variabel
     user_id = ''
     found = False
     nomor = 1
@@ -24,6 +25,6 @@ def riwayat(username) :
             print(f'{nomor}. {(i[0])}  | {(i[1])} | {(i[2])} | {(i[4])} | ')
             nomor += 1
         else :
-            pass    
+            pass  
     if not found :
-        print('Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.')   
+        print('Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.')  
