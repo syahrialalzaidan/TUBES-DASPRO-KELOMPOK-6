@@ -8,6 +8,7 @@ def search_game_at_store (game) :
     
     #ALGORITMA
     try :
+        #Deklarasi variabel yang diperlukan
         nomor = 1
         found = False 
         spek_game = ['' for x in range(5)]
@@ -19,6 +20,7 @@ def search_game_at_store (game) :
         spek_game[3] = input('Masukkan Tahun Rilis Game: ')
         print('Daftar game pada toko yang memenuhi kriteria: ')
         
+        #Menentukan status input lengkap atau sebagian atau tidak keduanya
         lengkap = True
         sebagian = False
         for x in spek_game :
@@ -27,10 +29,10 @@ def search_game_at_store (game) :
             else :
                 sebagian = True
         
+        #kondisi ketika input lengkap
         if lengkap :
             for a in game :
                 b = ['' for x in range(5)]
-                #b = a tanpa komponen terakhir(stok)
                 for x in range(5) :
                     b[x] = a[x]
                 
@@ -44,12 +46,15 @@ def search_game_at_store (game) :
         pass
 
     else :
+        #Ketika input kosong
         if spek_game == kosong :
             for a in game :
                 #ngatur ulang list biar sesuai yang diminta abangnya
                 if a[0] != 'id' : 
                     print(f'{nomor}. {(a[0])}  | {(a[1])} | {(a[4])} | {(a[2])} | {(a[3])} | {(str(a[5][:-1]))}')  #kalo ini dipakein samecount jadi error
                     nomor += 1
+
+        #ketika input diisi sebagian            
         elif sebagian and not lengkap : 
             for a in game :
                 b = ['' for x in range(5)]
