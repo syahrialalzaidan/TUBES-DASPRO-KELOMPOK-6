@@ -3,6 +3,10 @@
 
 # KAMUS
 # nama_folder : string
+# fileGame = SEQFILE of gameData
+# fileKepemilikan = SEQFILE of kepemilikanData
+# fileRiwayat = SEQFILE of historyData
+# fileUser = SEQFILE of userData
 
 # ALGORITMA
 def save(dataGame, dataKepemilikan, dataRiwayat, dataUser):
